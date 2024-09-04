@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function MeditationClock() {
     return (
@@ -10,9 +11,9 @@ function MeditationClock() {
                   <h1 className='border-2 bg-slate-400 tracking-[18px] px-4 sm:px-16 rounded-[40px] border-slate-500 p-3 text-7xl' >16:59</h1>
                 </div>
                 <div id="back" className='flex justify-center mt-10'>
-                    <button className='border-2  bg-slate-400 border-slate-500 p-3 px-8 rounded-[40px]'>
-                        Back
-                    </button>
+                  <Link to=".."><button className='border-2  bg-slate-400 border-slate-500 p-3 px-8 rounded-[40px]'>
+                        Home
+                    </button></Link>
                 </div>
                 </div>
              </div>

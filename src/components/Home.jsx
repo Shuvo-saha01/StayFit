@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -11,13 +12,13 @@ function Home() {
         </div>
 
         <div id="FirstRow" className="sm:flex ">
-        <div id="BMI" className="border-2 p-8 mb-3 sm:my-0 py-12 bg-[#19DF19] rounded-[40px] px-12 sm:mx-5 text-white font-semibold">
+        <Link to="bmi" id="BMI" className="border-2 p-8 mb-3 sm:my-0 py-12 bg-[#19DF19] rounded-[40px] px-12 sm:mx-5 text-white font-semibold">
             <h1 className="text-3xl sm:text-2xl mb-3">BMI 24</h1>
             <h5 className="text-2xl ">"You are as <br/>fine as you can get"</h5>
             <div className="flex justify-end ">
                 <h6 className="text-xl" >&gt;</h6>
             </div>
-        </div>
+        </Link>
 
         <div id="Water" className="border-2 p-8 py-12 bg-[#0D6BF9] rounded-[40px] px-12 sm:mx-5 text-white font-semibold">
             <h1 className="text-3xl mb-3">Drink more 2.4L</h1>
@@ -26,20 +27,20 @@ function Home() {
         </div>
         </div>
 
-        <div id="SecondRow" className="mt-5 sm:flex sm:justify-between mb-5">
+        <Link to="medTimer/" id="SecondRow" className="mt-5 sm:flex sm:justify-between mb-5">
             <div id="medTimer" className="sm:w-80 border-2 w-80  rounded-[56px] mb-3 sm:my-3 p-6 text-3xl sm:mx-6 font-semibold bg-[#FB2323] text-white">
                 <h1>Set Meditation Timer</h1>
                 <div className="flex justify-end ">
                     <h6 className="text-xl" >&gt;</h6>
                 </div>
             </div>
-            <div id="mentalHealth" className="sm:w-80 border-2 w-80 rounded-[56px] mb-3 sm:my-3 p-6 text-3xl  sm:mx-6 font-semibold bg-[#FB2323] text-white">
+            <Link to="mental-health" id="mentalHealth" className="sm:w-80 border-2 w-80 rounded-[56px] mb-3 sm:my-3 p-6 text-3xl  sm:mx-6 font-semibold bg-[#FB2323] text-white">
                 <h1>Mental Health</h1>
                 <div className="flex justify-end ">
                     <h6 className="text-xl" >&gt;</h6>
                 </div>
-            </div>
-        </div>
+            </Link>
+        </Link>
         
       </div>
     </div>
