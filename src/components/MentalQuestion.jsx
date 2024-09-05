@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux'
+import {reduxInput1, reduxInput2, reduxInput3, reduxInput4, reduxInput5, reduxInput6, reduxInput7, reduxInput8, reduxInput9, reduxInput10} from "../app/mentalSlice"
 
 function MentalQuestion() {
   const [input1, setInput1] = useState("0");
@@ -13,8 +15,32 @@ function MentalQuestion() {
   const [input9, setInput9] = useState("0");
   const [input10, setInput10] = useState("0");
 
+  const dispatch = useDispatch()
 
-  
+  const range = (num) => {
+    if(num === 0){
+      return 3
+    }
+    else if(num<4 && num>0){
+      return 0;
+    }else if (num>3 && num<7){
+      return 1;
+    }else{
+      return 2;
+    }
+  }
+  const onSubmit = () => {
+    dispatch(reduxInput1(range(input1)))
+    dispatch(reduxInput2(range(input2)))
+    dispatch(reduxInput3(range(input3)))
+    dispatch(reduxInput4(range(input4)))
+    dispatch(reduxInput5(range(input5)))
+    dispatch(reduxInput6(range(input6)))
+    dispatch(reduxInput7(range(input7)))
+    dispatch(reduxInput8(range(input8)))
+    dispatch(reduxInput9(range(input9)))
+    dispatch(reduxInput10(range(input10)))
+  }
 
   return (
     <div id="body" className="flex justify-center items-center flex-col">
@@ -150,7 +176,7 @@ function MentalQuestion() {
     
       </div>
       <div className="mt-5 pb-10">
-      <Link to='mentalResult'className="border-2 p-3  rounded-2xl text-2xl font-semibold hover:bg-slate-400">SUBMIT</Link>
+      <Link to='mentalResult' onClick={onSubmit} className="border-2 p-3  rounded-2xl text-2xl font-semibold hover:bg-slate-400">SUBMIT</Link>
       </div>
     </div>
   );
