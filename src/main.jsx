@@ -12,16 +12,18 @@ import MentalResult from "./components/MentalResult.jsx";
 import MeditationClock from "./components/MeditationClock.jsx";
 import { store } from "./app/store";
 import { Provider } from "react-redux";
+import Info from "./components/Info.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout />}>
-      <Route path='' element={<Home />} />
-      <Route path='bmi' element={<BmiReport />} />
-      <Route path='medTimer' element={<MedTimer />} />
-      <Route path='MedTimer/timer' element={<MeditationClock />} />
-      <Route path='mental-health' element={<MentalQuestion />} />
-      <Route path='mental-health/mentalResult' element={<MentalResult />} />
+      <Route path='' element={<Info />} />
+      <Route path='home' element={<Home />} />
+      <Route path='home/bmi' element={<BmiReport />} />
+      <Route path='home/medTimer' element={<MedTimer />} />
+      <Route path='home/medTimer/timer' element={<MeditationClock />} />
+      <Route path='home/mental-health' element={<MentalQuestion />} />
+      <Route path='home/mental-health/mentalResult' element={<MentalResult />} />
       
       
     </Route>

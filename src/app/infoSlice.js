@@ -2,12 +2,12 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
     value: {
-        sex: "Male",
+        sex: "",
         age: 25,
         weight: 60,
         height: 170,
         stressed: true,
-        bmi: 25,
+        bmi: "you have not selcted a gender",
         time: 1200,
     }
   }

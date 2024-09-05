@@ -10,10 +10,10 @@ function MedTimer() {
 
   const stress = useSelector((state) => state.info.value.stressed)
   useEffect(() => {
-    if(stress){
-      setOutput("As a stressed person, 10 Min should be your start to the journey")
+    if(stress === "happy"){
+      setOutput("As a calm person, 20 min can be a optimal choice. You can also choose 10 min if you are a beginner and work your way through")
     }else{
-      setOutput("As a stressless person 20 Mins should be better choice for daily practise")
+      setOutput("As a stressed person, 10 Min should be your start to the journey, try not to take too much pressure and work your way through when you feel comfortable")
     }
   },[stress])
 
