@@ -4,16 +4,16 @@ import { useSelector, useDispatch } from 'react-redux'
 import {reduxInput1, reduxInput2, reduxInput3, reduxInput4, reduxInput5, reduxInput6, reduxInput7, reduxInput8, reduxInput9, reduxInput10} from "../app/mentalSlice"
 
 function MentalQuestion() {
-  const [input1, setInput1] = useState("0");
-  const [input2, setInput2] = useState("0");
-  const [input3, setInput3] = useState("0");
-  const [input4, setInput4] = useState("0");
-  const [input5, setInput5] = useState("0");
-  const [input6, setInput6] = useState("0");
-  const [input7, setInput7] = useState("0");
-  const [input8, setInput8] = useState("0");
-  const [input9, setInput9] = useState("0");
-  const [input10, setInput10] = useState("0");
+  const [input1, setInput1] = useState(0);
+  const [input2, setInput2] = useState(0);
+  const [input3, setInput3] = useState(0);
+  const [input4, setInput4] = useState(0);
+  const [input5, setInput5] = useState(0);
+  const [input6, setInput6] = useState(0);
+  const [input7, setInput7] = useState(0);
+  const [input8, setInput8] = useState(0);
+  const [input9, setInput9] = useState(0);
+  const [input10, setInput10] = useState(0);
 
   const dispatch = useDispatch()
 
